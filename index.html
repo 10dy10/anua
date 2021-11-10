@@ -15,36 +15,45 @@
     <title>Anua</title>
     <style>
         /* reset */
-        *{box-sizing:border-box;margin:0;padding:0;}
+        *{box-sizing:border-box;margin:0;padding:0;color:#333;}
         h1,h2,h3,h4,h5,h6{font-weight:inherit;font-size:inherit;}
         b,strong{font-weight:inherit;}
         i,address{font-style:inherit;}
         ul,ol,li{list-style:none;}
         a{text-decoration:none;color:inherit;}
+        img{margin:0}
 
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
         :root{font-family:'Noto Sans KR',sans-serif;font-weight:400;font-size:14px;}
-        .container{max-width:1606px;margin:0 auto;}
+        .container{margin:0 auto;max-width:1200px;}
 
+        .back-swiper{height:100vh;}
         .swiper01 picture{width:100%;height:100vh;}
         .swiper-button-next:after,.swiper-button-prev:after{color:rgba(255,255,255,0.5);}
+        .swiper-pagination-bullet-active{background:#fff;}
         .right-write{position:fixed;right:-20px;transform:rotate(90deg);}
+        .swiper-horizontal > .swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal, .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite, .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite{
+            bottom:50px;
+            top:auto;
+        }
 
         /* header style */
-        .header-top{display:flex;flex-flow:row nowrap;justify-content:space-between;padding:20px 8.177vw;border-bottom:1px solid rgba(255,255,255,0.5);position:fixed;top:0;left:0;right:0;z-index:9999;}
+        .header-container{max-width:none;width:100%;height:93px;border-bottom:1px solid rgba(255,255,255,0.5);position:fixed;top:0;left:0;right:0;z-index:9999;}
+        .header-top{max-width:1200px;margin:0 auto;display:flex;flex-flow:row nowrap;justify-content:space-between;padding:20px 0;}
+        .nav{display:flex;flex-flow:row nowrap;align-items:center;}
         .main-nav{display:flex;width:570px;justify-content:space-between;}
-        .main-nav a{font-size:22px;color:#fff;}
+        .main-nav a{font-size:18px;color:#fff;}
+        .right-nav{display:flex;flex-flow:row nowrap;align-items:center;}
         .right-nav ul{display:flex;}
-        .icon-nav a{margin-left:15px;font-size:30px;color:#fff;}
+        .icon-nav a i{margin-left:15px;font-size:20px;color:#fff;}
 
         /* best-seller style */
-        .best-seller{margin-top:100px;}
-        .main-txt{margin-bottom:45px;font-weight:500;font-size:40px;text-align:center;color:#5c746d;}
-        .sub-txt{margin-bottom:45px;font-weight:300;font-size:25px;color:#333;text-align:center;}
-        
+        .best-seller{margin-top:200px;}
+        .main-txt{margin-bottom:45px;font-weight:500;font-size:30px;text-align:center;color:#5c746d;}
+        .sub-txt{margin-bottom:45px;font-weight:300;font-size:20px;color:#333;text-align:center;}
         /* .product-slider{display:flex;} */
-        .best-seller{position:relative;margin-bottom:100px;}
+        .best-seller{position:relative;margin-bottom:150px;}
         .best-seller::after{
             content:'';
             display:block;
@@ -55,16 +64,50 @@
             bottom:0;
             background-color:#cce0d4;
         }
-        .swiper02{width:1290px;}
-        .product-box{width:29.4573%;}
-        .product-box a img{width:380px;margin-bottom:10px;box-shadow:3px 2px 4px rgba(0,0,0,0.3);}
-        .product-name,.price{width:380px;color:#333;text-align:center;}
-        .product-name{font-weight:500;font-size:30px;}
-        .price{font-weight:600;font-size:20px;}
-        .btn-view{
+        .swiper02{width:1200px;}
+        .product-box{width:23.3333333%;}
+        .product-box a img{width:280px;margin-bottom:10px;box-shadow:3px 2px 4px rgba(0,0,0,0.3);}
+        .product-name,.price{width:280px;color:#333;text-align:center;}
+        .product-name{font-weight:500;font-size:24px;}
+        .price{font-weight:600;font-size:18px;}
+        .btn-view-more{
             width:250px;height:75px;background-color:#fff;border:1px solid #5c746d;z-index:9998;
             font-weight:500;font-size:30px;color:#5c746d;text-align:center;align-items: center;}
 
+        .line{width:180px;height:1px;background-color:#999;margin:0 auto 100px;}
+
+        /* contents style */
+        .contents{position:relative;margin-bottom:100px;}
+        .contents::after{content:'';display:block;position:absolute;left:0;right:0;bottom:300px;top:263px;background-color:#e7efea;z-index:-99999;}
+        .contents .txt-box{display:flex;flex-flow:column;align-items:center;justify-content:center;text-align:center;}
+        .top-contents{margin-bottom:50px;}
+        .top-contents,.bottom-contents{display:flex;justify-content:space-between;}
+        .top-contents .img-box,.bottom-contents .txt-box{width:40%;margin-left:40px;}
+        .top-contents .txt-box,.bottom-contents .img-box{width:40%;margin-right:40px;}
+        .contents-container h3{font-weight:500;font-size:35px;line-height:40px;margin-bottom:25px;}
+        .contents-container .txt-box p{font-size:25px;line-height:30px;margin-bottom:25px;}
+        .btn-view{width:100px;height:40px;padding:8px;background-color:#5c746d;}
+        .btn-view a{color:#fff;}
+
+        /* anua-story style */
+        .anua-story{position:relative;margin-bottom:200px;}
+        .anua-story-container{max-width:1360px;display:flex;flex-flow:row nowrap;justify-content:space-between;}
+        .left-img{width:61.3235%;display:flex;flex-flow:row nowrap;justify-content:space-between;}
+        .left-img img:nth-child(2),.left-img img:nth-child(4){margin-top:100px;}
+        .right-txt{width:36.7647%;display:flex;flex-flow:column;align-items:center;justify-content:center;}
+        .circle-logo{margin-bottom:20px;}
+        .circle-logo img{width:80px;height:80px;}
+        .anua-story-txt{font-size:30px;text-align:left;}
+        .bottom-txt{position:absolute;right:150px;bottom:0;}
+
+        /* footer style */
+        .footer{width:100vw;background-color:#5c746d;padding:30px 0;}
+        .footer-container{display:flex;justify-content:space-between;}
+        .footer *{color:#fff;}
+        .footer-logo img{width:80px;height:80px;margin-bottom:20px;}
+        address{margin-bottom:1em;text-align:right;}
+        .footer-nav ul{display:flex;justify-content:flex-end;}
+        .footer-nav ul li{margin-left:1em;}
     </style>
 </head>
 <body>
@@ -168,11 +211,81 @@
                         </div>
                     </div>
                 </div>
-                <div class="btn-view">
+                <div class="btn-view-more">
                     VIEW MORE
                 </div>
             </div>
         </div>
+        <div class="line"></div>
+        <div class="contents">
+            <div class="container contents-container">
+                <div class="top-contents">
+                    <div class="img-box">
+                        <img src="./images/contents01.jpg" alt="어성초 토너">
+                    </div>
+                    <div class="txt-box">
+                        <h3>약한고 민감한 피부엔<br>아누아 어성초 77토너</h3>
+                        <p>어성초 추출물을 가득 담았어요</p>
+                        <div class="btn-view"><a href="#">VIEW</a></div>
+                    </div>
+                </div>
+                <div class="bottom-contents">
+                    <div class="txt-box">
+                        <h3>11.08-14 단 7일 간!<br>어성초 77패드 24% 할인</h3>
+                        <p>역대급  패드 할인 이벤트<br>오직 올리브영에서만 만나보세요! </p>
+                        <div class="btn-view"><a href="#">VIEW</a></div>
+                    </div>
+                    <div class="img-box">
+                        <img src="./images/contents02.jpg" alt="어성초 패드">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="anua-story">
+            <div class="container anua-story-container">
+                <div class="left-img">
+                    <img src="./images/bottom-banner01.jpg" alt="이미지1">
+                    <img src="./images/bottom-banner02.jpg" alt="이미지2">
+                    <img src="./images/bottom-banner03.jpg" alt="이미지3">
+                    <img src="./images/bottom-banner04.jpg" alt="이미지4">
+                </div>
+                <div class="right-txt">
+                    <div class="circle-logo"><img src="./images/bottom-logo.png" alt="logo"></div>
+                    <div class="anua-story-txt">아누아는 편안한 시간,<br>나를 깨우는 시간을 응원합니다.</div>
+                </div>
+            </div>
+            <div class="bottom-txt"><img src="./images/brand-tit-pc.png" alt="brand-tit"></div>
+        </div>
+        <footer class="footer">
+            <div class="container footer-container">
+                <div class="left-footer">
+                    <div class="footer-logo"><img src="./images/footer-logo.png" alt="logo"></div>
+                    <p>02-2135-6648<br>
+                        AM 10:00 - PM 5:00<br>
+                        Lunch Break PM 12:30 - PM 2:00<br>
+                        토,일요일 및 공휴일 휴무</p>
+                </div>
+                <div class="right-footer">
+                    <address>
+                        대표 Senhyeong Yi, Changju Lee<br>
+                        주소 서울특별시 강남구 테헤란로 507 (삼성동) 7층 The Founders INC<br>
+                        이메일 business@anua.kr<br>
+                        사업자등록번호 814-86-00820<br>
+                        통신판매업신고 제2018-서울강남-03368호<br>
+                        개인정보관리책임 Seonhyeong Yi<br>
+                        호스팅제공 카페24(주)<br>
+                        Copyright ⓒ ANUA.ALL Rights Reserved.
+                    </address>
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">이용안내</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
     </div>
     <script>
@@ -207,8 +320,8 @@
         $(function(){
             $(window).scroll(function(){
                 let scroll = $(window).scrollTop();
-                if(scroll>1){$('.header-top').css('background-color','rgba(0,0,0,0.3')}
-                else{$('.header-top').css('background-color','transparent')}
+                if(scroll>1){$('.header-container').css('background-color','rgba(0,0,0,0.3')}
+                else{$('.header-container').css('background-color','transparent')}
             })
         })
     </script>
