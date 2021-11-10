@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -28,15 +29,11 @@
         :root{font-family:'Noto Sans KR',sans-serif;font-weight:400;font-size:14px;}
         .container{margin:0 auto;max-width:1200px;}
 
-        .back-swiper{height:100vh;}
-        .swiper01 picture{width:100%;height:100vh;}
+        .back-swiper{width:100vw;height:100%;}
+        .swiper01 img{width:100vw;height:100%;}
         .swiper-button-next:after,.swiper-button-prev:after{color:rgba(255,255,255,0.5);}
         .swiper-pagination-bullet-active{background:#fff;}
         .right-write{position:fixed;right:-20px;transform:rotate(90deg);}
-        .swiper-horizontal > .swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal, .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite, .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite{
-            bottom:50px;
-            top:auto;
-        }
 
         /* header style */
         .header-container{max-width:none;width:100%;height:93px;border-bottom:1px solid rgba(255,255,255,0.5);position:fixed;top:0;left:0;right:0;z-index:9999;}
@@ -47,12 +44,14 @@
         .right-nav{display:flex;flex-flow:row nowrap;align-items:center;}
         .right-nav ul{display:flex;}
         .icon-nav a i{margin-left:15px;font-size:20px;color:#fff;}
+        .btn-nav{margin-right:20px;display:none;flex-flow:column;justify-content:center;}
+        .btn-nav i{font-size:30px;color:#fff;}
 
         /* best-seller style */
         .best-seller{margin-top:200px;}
         .main-txt{margin-bottom:45px;font-weight:500;font-size:30px;text-align:center;color:#5c746d;}
         .sub-txt{margin-bottom:45px;font-weight:300;font-size:20px;color:#333;text-align:center;}
-        /* .product-slider{display:flex;} */
+        /* .product-slider .swiper-slide{display:flex;flex-flow:column;align-items:center;} */
         .best-seller{position:relative;margin-bottom:150px;}
         .best-seller::after{
             content:'';
@@ -60,9 +59,10 @@
             position:absolute;
             left:11.1979vw;
             right:11.1979vw;
-            top:420px;
-            bottom:0;
+            top:350px;
+            bottom:-77px;
             background-color:#cce0d4;
+            z-index:-999;
         }
         .swiper02{width:1200px;}
         .product-box{width:23.3333333%;}
@@ -70,11 +70,13 @@
         .product-name,.price{width:280px;color:#333;text-align:center;}
         .product-name{font-weight:500;font-size:24px;}
         .price{font-weight:600;font-size:18px;}
-        .btn-view-more{
-            width:250px;height:75px;background-color:#fff;border:1px solid #5c746d;z-index:9998;
-            font-weight:500;font-size:30px;color:#5c746d;text-align:center;align-items: center;}
+        .btn-view-more{margin-top:30px;
+            width:250px;height:75px;background-color:#fff;border:1px solid #5c746d;
+            font-weight:500;font-size:30px;color:#5c746d;text-align:center;align-items: center;
+            padding:10px;position:absolute;left:50%;right:50%;transform:translate(-50%,0);
+        }
 
-        .line{width:180px;height:1px;background-color:#999;margin:0 auto 100px;}
+        .line{width:180px;height:1px;background-color:#999;margin:200px auto 100px;}
 
         /* contents style */
         .contents{position:relative;margin-bottom:100px;}
@@ -108,6 +110,28 @@
         address{margin-bottom:1em;text-align:right;}
         .footer-nav ul{display:flex;justify-content:flex-end;}
         .footer-nav ul li{margin-left:1em;}
+
+
+
+        @media(max-width:1299px){
+            .left-img img:nth-child(1){display:none;}
+        }
+        @media(max-width:1000px){
+
+            /* header style */
+            .logo{margin-left:20px;}
+            .btn-nav{display:flex;}
+            .nav,.right-nav{display:none;}
+
+            /* contents style */
+            .top-contents .img-box,.bottom-contents .txt-box{margin-left:0;}
+            .top-contents .txt-box,.bottom-contents .img-box{margin-right:0;}
+
+            /* anua-story style */
+            .left-img img:nth-child(1){display:block;}
+            .right-txt{display:none;}
+            .left-img{width:100%;margin:0 20px;}
+        }
     </style>
 </head>
 <body>
@@ -118,19 +142,19 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <picture>
-                            <source media="(max-width:768px)" srcset="./images/mo-slide-banner01.jpg">
+                            <source media="(max-width:767px)" srcset="./images/mo-slide-banner01.jpg">
                             <img src="./images/slide-banner01.jpg" alt="슬라이드1">
                         </picture>
                     </div>
                     <div class="swiper-slide">
                         <picture>
-                            <source media="(max-width:768px)" srcset="./images/mo-slide-banner02.jpg">
+                            <source media="(max-width:767px)" srcset="./images/mo-slide-banner02.jpg">
                             <img src="./images/slide-banner02.jpg" alt="슬라이드2">
                         </picture>
                     </div>
                     <div class="swiper-slide">
                         <picture>
-                            <source media="(max-width:768px)" srcset="./images/mo-slide-banner02.jpg">
+                            <source media="(max-width:767px)" srcset="./images/mo-slide-banner02.jpg">
                             <img src="./images/slide-banner03.jpg" alt="슬라이드3">
                         </picture>
                     </div>
@@ -161,6 +185,7 @@
                             <li><a href="#"><i class="fas fa-search"></i></a></li>
                         </ul>
                     </div>
+                    <div class="btn-nav"><i class="fas fa-bars"></i></div>
                 </div>
             </div>
         </header>
@@ -312,8 +337,10 @@
             breakpoints:{
                 1024:{
                     slidesPerView:3,
-                    spaceBetween:20
                 },
+                1000:{
+                    slidesPerView:2,
+                }
             }
         });
 
