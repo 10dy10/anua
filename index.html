@@ -29,54 +29,47 @@
         :root{font-family:'Noto Sans KR',sans-serif;font-weight:400;font-size:14px;}
         .container{margin:0 auto;max-width:1200px;}
 
-        .back-swiper{width:100vw;height:100%;}
-        .swiper01 img{width:100vw;height:100%;}
+        .line,.line2{width:180px;height:1px;background-color:#999;margin:200px auto 100px;}
+        .line2{width:100px;margin:150px auto 0;}
+
+        .back-swiper{width:100%;height:100%;}
+        .swiper01 img{width:100%;height:100%;}
         .swiper-button-next:after,.swiper-button-prev:after{color:rgba(255,255,255,0.5);}
         .swiper-pagination-bullet-active{background:#fff;}
         .right-write{position:fixed;right:-20px;transform:rotate(90deg);}
+        .swiper-button-next{right:25px;}
 
         /* header style */
-        .header-container{max-width:none;width:100%;height:93px;border-bottom:1px solid rgba(255,255,255,0.5);position:fixed;top:0;left:0;right:0;z-index:9999;}
-        .header-top{max-width:1200px;margin:0 auto;display:flex;flex-flow:row nowrap;justify-content:space-between;padding:20px 0;}
+        .header-container{max-width:none;width:100%;height:80px;padding:0 15px;border-bottom:1px solid rgba(255,255,255,0.5);position:fixed;top:0;left:0;right:0;z-index:9999;}
+        .header-top{max-width:1200px;height:80px;margin:0 auto;display:flex;flex-flow:row nowrap;justify-content:space-between;padding:20px 0;}
         .nav{display:flex;flex-flow:row nowrap;align-items:center;}
-        .main-nav{display:flex;width:570px;justify-content:space-between;}
+        .desk-nav{display:flex;}
+        .main-nav{display:flex;justify-content:space-between;margin-right:20px;width:570px;}
         .main-nav a{font-size:18px;color:#fff;}
-        .right-nav{display:flex;flex-flow:row nowrap;align-items:center;}
+        .icon-nav{display:flex;flex-flow:row nowrap;align-items:center;}
         .right-nav ul{display:flex;}
         .icon-nav a i{margin-left:15px;font-size:20px;color:#fff;}
-        .btn-nav{margin-right:20px;display:none;flex-flow:column;justify-content:center;}
+        .mo-nav{display:none;align-items:center;width:100%;height:80px;position:fixed;left:0;right:0;top:0;background-color:#fff;transform:translate(100%,0);transition:0.3s;}
+        .btn-nav{margin-right:20px;display:none;flex-flow:column;justify-content:center;cursor:pointer;}
+        .mo-main-nav{display:flex;width:90%;margin:0 auto;justify-content:space-between;}
+        .mo-left-nav{display:flex;flex:3;justify-content:space-around;align-items:center;}
         .btn-nav i{font-size:30px;color:#fff;}
+        .mo-nav .icon-nav i{color:#000;}
+        .btn-close{font-size:25px;cursor:pointer;}
 
         /* best-seller style */
-        .best-seller{margin-top:200px;}
+        .best-seller{margin-top:150px;margin-bottom:150px;position:relative;}
         .main-txt{margin-bottom:45px;font-weight:500;font-size:30px;text-align:center;color:#5c746d;}
         .sub-txt{margin-bottom:45px;font-weight:300;font-size:20px;color:#333;text-align:center;}
         /* .product-slider .swiper-slide{display:flex;flex-flow:column;align-items:center;} */
-        .best-seller{position:relative;margin-bottom:150px;}
-        .best-seller::after{
-            content:'';
-            display:block;
-            position:absolute;
-            left:11.1979vw;
-            right:11.1979vw;
-            top:350px;
-            bottom:-77px;
-            background-color:#cce0d4;
-            z-index:-999;
-        }
-        .swiper02{width:1200px;}
-        .product-box{width:23.3333333%;}
-        .product-box a img{width:280px;margin-bottom:10px;box-shadow:3px 2px 4px rgba(0,0,0,0.3);}
-        .product-name,.price{width:280px;color:#333;text-align:center;}
+        .best-seller::after{content:'';display:block;position:absolute;left:11.1979vw;right:11.1979vw;top:350px;bottom:-77px;background-color:#cce0d4;z-index:-999;}
+        .swiper02{width:90%;}
+        .product-box{text-align:center;}
         .product-name{font-weight:500;font-size:24px;}
-        .price{font-weight:600;font-size:18px;}
-        .btn-view-more{margin-top:30px;
-            width:250px;height:75px;background-color:#fff;border:1px solid #5c746d;
-            font-weight:500;font-size:30px;color:#5c746d;text-align:center;align-items: center;
-            padding:10px;position:absolute;left:50%;right:50%;transform:translate(-50%,0);
-        }
+        .price{margin-top:10px;font-size:22px;}
+        .btn-view-more{font-weight:500;font-size:20px;width:200px;height:50px;padding-top:8px;border:1px solid #5c746d;background-color:#fff;text-align:center;color:#5c746d;
+            position:absolute;left:50%;right:50%;bottom:-16%;transform:translate(-50%,0);}
 
-        .line{width:180px;height:1px;background-color:#999;margin:200px auto 100px;}
 
         /* contents style */
         .contents{position:relative;margin-bottom:100px;}
@@ -92,7 +85,7 @@
         .btn-view a{color:#fff;}
 
         /* anua-story style */
-        .anua-story{position:relative;margin-bottom:200px;}
+        .anua-story{position:relative;width:90%;margin:0 auto 200px;}
         .anua-story-container{max-width:1360px;display:flex;flex-flow:row nowrap;justify-content:space-between;}
         .left-img{width:61.3235%;display:flex;flex-flow:row nowrap;justify-content:space-between;}
         .left-img img:nth-child(2),.left-img img:nth-child(4){margin-top:100px;}
@@ -103,8 +96,8 @@
         .bottom-txt{position:absolute;right:150px;bottom:0;}
 
         /* footer style */
-        .footer{width:100vw;background-color:#5c746d;padding:30px 0;}
-        .footer-container{display:flex;justify-content:space-between;}
+        .footer{width:100%;background-color:#5c746d;padding:30px 0;}
+        .footer-container{display:flex;justify-content:space-between;width:90%;}
         .footer *{color:#fff;}
         .footer-logo img{width:80px;height:80px;margin-bottom:20px;}
         address{margin-bottom:1em;text-align:right;}
@@ -117,6 +110,8 @@
             .left-img img:nth-child(1){display:none;}
         }
         @media(max-width:1000px){
+            .container{margin:0 20px;}
+            .container:nth-of-type(1){margin:0;}
 
             /* header style */
             .logo{margin-left:20px;}
@@ -131,6 +126,31 @@
             .left-img img:nth-child(1){display:block;}
             .right-txt{display:none;}
             .left-img{width:100%;margin:0 20px;}
+        }
+        @media (max-width:767px) {
+            .container{margin:0 10px;}
+            .container:nth-of-type(4){margin:0;}
+
+            .logo img{width:60%;margin-top:7px;}
+
+            .desk-nav{display:none;}
+            .btn-nav{display:flex;}
+            .mo-nav{display:flex;}
+
+            .line2{margin-top:100px;}
+
+            .best-seller{margin-top:100px;}
+
+            .top-contents{flex-flow:column wrap;}
+            .bottom-contents{flex-flow:column wrap;}
+            .bottom-contents .img-box{order:1;}
+            .bottom-contents .txt-box{order:2;}
+            .top-contents .img-box,.bottom-contents .img-box{width:100%;}
+            .top-contents .txt-box,.bottom-contents .txt-box{width:100%;}
+            .top-contents .img-box img,.bottom-contents .img-box img{width:100%;}
+
+            .left-img img:nth-child(1),.left-img img:nth-child(2),.left-img img:nth-child(4){display:none;}
+            .bottom-txt img{width:186%;}
         }
     </style>
 </head>
@@ -171,24 +191,40 @@
             <div class="container header-container">
                 <div class="header-top" id="header-top">
                     <div class="logo"><a href="./index.html"><img src="./images/logo-white.png" alt="홈으로 이동"></a></div>
-                    <nav class="nav">
-                        <ul class="main-nav">
-                            <li><a href="#">SHOP</a></li>
-                            <li><a href="#">ANUA STORY</a></li>
-                            <li><a href="#">COMMUNITY</a></li>
-                        </ul>
-                    </nav>
-                    <div class="right-nav">
-                        <ul class="icon-nav">
-                            <li><a href="#"><i class="far fa-user"></i></a></li>
-                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                            <li><a href="#"><i class="fas fa-search"></i></a></li>
-                        </ul>
+                    <div class="desk-nav">
+                        <nav class="nav">
+                            <ul class="main-nav">
+                                <li><a href="#">SHOP</a></li>
+                                <li><a href="#">ANUA STORY</a></li>
+                                <li><a href="#">COMMUNITY</a></li>
+                            </ul>
+                            <ul class="icon-nav">
+                                <li><a href="#"><i class="far fa-user"></i></a></li>
+                                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-search"></i></a></li>
+                            </ul>
+                        </nav>
                     </div>
                     <div class="btn-nav"><i class="fas fa-bars"></i></div>
+                    <div class="mo-nav">
+                        <div class="mo-main-nav">
+                            <div class="btn-close"><i class="fas fa-times"></i></div>
+                            <ul class="mo-left-nav">
+                                <li><a href="#">SHOP</a></li>
+                                <li><a href="#">ANUA STORY</a></li>
+                                <li><a href="#">COMMUNITY</a></li>
+                            </ul>
+                            <ul class="icon-nav">
+                                <li><a href="#"><i class="far fa-user"></i></a></li>
+                                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-search"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </header>
+        <div class="line2"></div>
         <div class="best-seller">
             <div class="container best-seller-container">
                 <div class="top-txt">
@@ -314,43 +350,54 @@
 
     </div>
     <script>
-        // swiper
-        const swiper01 = new Swiper('.back-swiper .swiper', {
-            loop: true,
-            autoplay: {
-                delay: 8000,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-
-        const swiper02 = new Swiper('.best-seller .swiper', {
-            loop: true,
-            autoplay: {
-                delay: 8000,
-            },
-            breakpoints:{
-                1024:{
-                    slidesPerView:3,
-                },
-                1000:{
-                    slidesPerView:2,
-                }
-            }
-        });
-
         $(function(){
+            // swiper
+            const swiper01 = new Swiper('.back-swiper .swiper', {
+                loop: true,
+                autoplay: {
+                    delay: 8000,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+
+            const swiper02 = new Swiper('.best-seller .swiper', {
+                loop: true,
+                autoplay: {
+                    delay: 8000,
+                },
+                breakpoints:{
+                    1024:{
+                        slidesPerView:3,
+                    },
+                    1000:{
+                        slidesPerView:2,
+                    },
+                    767:{
+                        slidesPerView:1,
+                    }
+                }
+            });
+
             $(window).scroll(function(){
                 let scroll = $(window).scrollTop();
                 if(scroll>1){$('.header-container').css('background-color','rgba(0,0,0,0.3')}
                 else{$('.header-container').css('background-color','transparent')}
             })
+
+            $('.btn-nav').click(function(){
+                $('.mo-nav').css('transform','translate(0,0)');
+            })
+            $('.btn-close').click(function(){
+                $('.mo-nav').css('transform','translate(100%,0)');
+            })
         })
+        
     </script>
 </body>
 </html>
