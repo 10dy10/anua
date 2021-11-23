@@ -23,12 +23,15 @@ $(function(){
         breakpoints:{
             1024:{
                 slidesPerView:3,
+                spaceBetween: 20,
             },
             1000:{
                 slidesPerView:2,
+                spaceBetween: 20,
             },
             767:{
                 slidesPerView:1,
+                spaceBetween: 20,
             }
         }
     });
