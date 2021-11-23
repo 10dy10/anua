@@ -96,7 +96,7 @@ address{margin-bottom:1em;text-align:right;}
     .left-img img:nth-child(1){display:none;}
 }
 @media (max-width:1200px) {
-    .contents{margin:0 auto;width:90%;}
+    .contents{margin:0 auto 100px;width:90%;}
     .top-contents,.bottom-contents{width:90%;margin:0 auto;}
 }
 @media(max-width:1000px){
@@ -116,7 +116,7 @@ address{margin-bottom:1em;text-align:right;}
 
     /* anua-story style */
     .left-img img:nth-child(1){display:block;}
-    .right-txt{display:none;}
+    .right-txt,.left-img img:nth-child(4){display:none;}
     .left-img{width:100%;margin:0 20px;}            
     .bottom-txt{right:20px;width:80%;}
 }
@@ -132,6 +132,7 @@ address{margin-bottom:1em;text-align:right;}
 
     .line2,.best-seller{margin-top:100px;}
 
+    .swiper02{width:64%;}
     .product-name{font-size:16px;margin-top:10px;}
     .price{font-size:14px;margin-top:6px;}
     .best-seller::after{bottom:-28px;}
@@ -145,7 +146,7 @@ address{margin-bottom:1em;text-align:right;}
     .contents-container h3{font-size:22px;line-height:24px;margin-bottom:12px;}
     .contents-container .txt-box p{font-size:14px;line-height:18px;margin-bottom:24px;}
 
-    .left-img img:nth-child(2),.left-img img:nth-child(4){display:none;}
+    .left-img img:nth-child(2){display:none;}
     .bottom-txt{right:0;width:100%;}
     .bottom-txt img{width:100%;}
 
