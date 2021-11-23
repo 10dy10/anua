@@ -108,6 +108,7 @@ address{margin-bottom:1em;text-align:right;}
     .btn-nav{display:flex;}
     .nav,.right-nav{display:none;}
 
+    .swiper02{width:64%;}
     .btn-view-more{bottom:-10%;}
 
     /* contents style */
@@ -132,7 +133,6 @@ address{margin-bottom:1em;text-align:right;}
 
     .line2,.best-seller{margin-top:100px;}
 
-    .swiper02{width:64%;}
     .product-name{font-size:16px;margin-top:10px;}
     .price{font-size:14px;margin-top:6px;}
     .best-seller::after{bottom:-28px;}
@@ -158,6 +158,7 @@ address{margin-bottom:1em;text-align:right;}
 }
 @media (max-width:500px) {
     .left-img img:nth-child(1){display:none;}
+    .left-img img{width:50%;margin:0 auto;}
 }
 @media (max-width:320px) {
     .wrap{display:none;}
