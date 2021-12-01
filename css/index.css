@@ -82,7 +82,7 @@ img{margin:0;width:100%}
 .bottom-txt{position:absolute;right:150px;bottom:0;}
 
 /* footer style */
-.footer{width:100%;position:relative;overflow:hidden;height:486px;
+.footer{width:100%;position:relative;overflow:hidden;height:470px;
     /* background-image:#5c746d; */
     display:flex;justify-content:center;align-items:center;}
 .footer::after{content:'';display:block;background:url(../images/footer-img.jpg);opacity:0.6;position:absolute;left:0;right:0;top:-810px;bottom:0;z-index:-99;}
